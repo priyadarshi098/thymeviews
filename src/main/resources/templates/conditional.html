@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>This is my conditional page</h1>
+	<h1>the user is <span th:style="${isActive} ? 'color:green' : 'color:red' " th:text="${isActive} ? 'active' : 'inactive'"></span></h1>
+	<div th:if="${gender} == 'M'">Male</div>
+	<div th:unless="${gender} == 'F'">Male</div>
+	<div th:switch="${#lists.size(mylist)}">
+		<div th:case="'0'">List is empty</div>
+		<div th:case="'1'">List has one element</div>
+		<div th:case="*">List has multiple elements</div>
+	</div>
+</body>
+</html>
