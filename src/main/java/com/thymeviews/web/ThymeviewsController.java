@@ -27,7 +27,7 @@ public class ThymeviewsController {
 	@GetMapping(value="/cond")
 	public String getConditional(Model model) {
 		model.addAttribute("isActive", true);
-		model.addAttribute("gender","M");
+		//model.addAttribute("gender","M");
 		List<Integer> list = List.of(12,34,56,78,90);
 		model.addAttribute("mylist", list);
 		return "conditional";
